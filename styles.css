@@ -1,0 +1,99 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+/* MOBILE */
+@media screen and (max-width: 500px) {
+/* HEADER */
+  header {
+    width: 100%;
+    height: 15vh;
+    background-color: grey;
+    display: grid; 
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+  }
+
+  #shares {
+    grid-area: 2 / 1 / 2 / 2;
+  }
+
+  #playlists {
+    grid-area: 2 / 2 / 2 / 2;
+  }
+
+  #personalVideos {
+    grid-area: 2 / 3 / 2 / 3;
+  }
+  
+  header > img {
+    grid-row: 1 / 3;
+    width: 10vh;
+  }
+
+/* MAIN */
+  main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .cards {
+    padding: 0;
+    overflow-y: scroll;
+  }
+
+  .card-container {
+    grid-template: 1fr 2fr / 1fr 1fr 1fr;
+    width: 100%;
+    border: 1px solid;
+  }
+
+  .card-image-container {
+    display: grid;
+    grid-template: 1fr / 1fr 75% 1fr;
+  }
+
+  .card-img {
+    width: 100%;
+    grid-area: 1 / 1 / 1 / span 3;
+  }
+
+  .card {
+    display: grid;
+    grid-row: 2 / 2;
+    background-color: white;
+    width: 100%;
+    margin: 5%;
+  }
+
+  .share-arrow {
+    grid-area: 1 / 1 / 1 / 1;
+  }
+
+  .view-count {
+    grid-area: 1 / 3 / 1 / 3;
+  }
+
+  .link {
+    background-color: rgba(233, 233, 233, 0.568);
+    padding: 10px;
+    margin-right: 10%;
+    color: grey;
+  }
+
+  .card > p {
+    font-family: Helvetica;
+    font-size: 2.6vh;
+  }
+
+  .date {
+    color: grey;
+    margin-top: 0;
+  }
+
+}
