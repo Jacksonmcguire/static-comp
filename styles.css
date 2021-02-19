@@ -4,6 +4,10 @@ body {
   margin: 0;
 }
 
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
 li {
   list-style: none;
 }
@@ -13,7 +17,7 @@ li {
   header {
     width: 100%;
     height: 15vh;
-    background-color: grey;
+    background-color: rgb(39, 38, 38);
     display: grid; 
     grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
   }
@@ -24,6 +28,7 @@ li {
     color: transparent;
     background-repeat: no-repeat;
     background-size: contain;
+    margin-bottom: 2%;
   }
 
   #shares {
@@ -56,58 +61,77 @@ li {
   .cards {
     padding: 0;
     overflow-y: scroll;
-    margin: 2%;
-    grid-template-columns: repeat(auto-fit, minmax(.5fr, 1fr));
+    margin: 1%;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(.5fr, 1fr)); */
   }
 
+  
   .card-container {
     grid-template: 1fr 2fr / 1fr 1fr 1fr;
-    border: 1px solid;
-    margin-bottom: 2%;
+    box-shadow: 0px 0px 2px 2px #8686865d;
+    margin: .5% .5% 5% .5%;
   }
-
+  
   .card-image-container {
     display: grid;
     grid-template: 1fr / 1fr 65% 1fr;
   }
-
+  
   .card-img {
-    opacity: .9;
     width: 100%;
     grid-area: 1 / 1 / 1 / span 3;
   }
-
+  
   .card {
     display: grid;
     grid-row: 2 / 2;
     background-color: white;
-    width: 100%;
+    width: 99%;
+    margin: 1%;
+    font-weight: bolder;
   }
-
+  
   .share-arrow {
     grid-area: 1 / 1 / 1 / 1;
+    background-color: white;
+    border-radius: 50%;
+    padding: 15%;
+    margin: 10%;
   }
-
+  
   .view-count {
     grid-area: 1 / 3 / 1 / 3;
     text-align: center;
+    color: white;
+    font-size: 1.2em;
+    line-height: 150%;
   }
 
+  .playlist, 
+  .attachments,
+  .card-name {
+    font-weight: 1000;
+    font-size: 2.5vh
+  }
+  
   .link {
     background-color: rgba(233, 233, 233, 0.568);
     padding: 10px;
-    margin-right: 10%;
     color: grey;
+    word-wrap: break-word;
+    width: 85%;
   }
-
-  .card > p {
-    font-family: Helvetica;
-    font-size: 2.6vh;
-  }
-
+  
   .date {
     color: grey;
     margin-top: 0;
+  }
+
+  .attachment-count {
+    color: blue;
+    font-size: 2em;
+    margin: 0;
   }
 
 }
