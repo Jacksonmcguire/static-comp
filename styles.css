@@ -7,17 +7,154 @@ body {
 * {
   font-family: 'Montserrat', sans-serif;
 }
+/* HEADER */
+header {
+  width: 100%;
+  background-color: rgb(39, 38, 38);
+  height: 15vh;
+  display: grid; 
+  grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
+}
+
+#personalVideos {
+  grid-area: 2 / 3 / 2 / 3;
+}
+
+#playlists {
+  grid-area: 2 / 2 / 2 / 2;
+}
+
+#shares {
+  grid-area: 2 / 1 / 2 / 2;
+}
+
+header > img {
+  grid-area: 1 / 4 / 3 / 4;
+  width: 100%;
+  height: 100%;
+}
 
 li {
   list-style: none;
 }
+
+/* main {
+  height: 100%;
+  display: grid;
+} */
+
+/* CARDS */
+.cards {
+  padding: 0;
+  margin: 1%;
+  display: grid;
+}
+
+.card-container {
+  grid-template: 1fr 2fr / 1fr 1fr 1fr;
+  box-shadow: 0px 0px 2px 2px #8686865d;
+  margin: .5% .5% 5% .5%;
+}
+/* CARD IMG */
+.card-image-container {
+  display: grid;
+  grid-template: 1fr / 1fr 65% 1fr;
+}
+
+.card-img {
+  width: 100%;
+  grid-area: 1 / 1 / 1 / span 3;
+}
+
+.share-arrow {
+  grid-area: 1 / 1 / 1 / 1;
+  background-color: white;
+  border-radius: 50%;
+  padding: 15%;
+  margin: 10%;
+}
+
+.view-count {
+  grid-area: 1 / 3 / 1 / 3;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  line-height: 150%;
+}
+
+/* CARD INFO */
+.card {
+  display: grid;
+  grid-row: 2 / 2;
+  background-color: white;
+  width: 99%;
+  margin: 1%;
+  font-weight: bolder;
+}
+
+.playlist, 
+.attachments,
+.card-name {
+  font-weight: 1000;
+  font-size: 3vh
+}
+
+.date, .link {
+  color: grey;
+  margin-top: 0;
+}
+
+.link {
+  background-color: rgba(233, 233, 233, 0.568);
+  padding: 10px;
+  color: grey;
+  word-wrap: break-word;
+  width: 85%;
+}
+
+/* TABLET */
+@media screen and (max-width: 900px) {
+  
+
+  header > button {
+    background: transparent;
+    border: none;
+    color: WHITE;
+    margin-bottom: 2%;
+    font-size: 2.4vh;
+  }
+  
+  header > img {
+    grid-area: 1 / 4 / 3 / 4;
+    width: 100%;
+    height: 100%;
+  }
+
+/* MAIN */
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .card-container {
+    margin: 3%;
+  }
+
+  .link {
+    width: 90%;
+  }
+
+  .attachment-count {
+    color: blue;
+    font-size: 2em;
+    margin: 0;
+  }
+}
+
 /* MOBILE */
 @media screen and (max-width: 500px) {
 /* HEADER */
   header {
-    width: 100%;
     height: 15vh;
-    background-color: rgb(39, 38, 38);
     display: grid; 
     grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
   }
@@ -32,100 +169,28 @@ li {
   }
 
   #shares {
-    grid-area: 2 / 1 / 2 / 2;
     background-image: url("https://img.icons8.com/dotty/80/000000/share.png");
   }
 
   #playlists {
-    grid-area: 2 / 2 / 2 / 2;
     background-image: url("https://img.icons8.com/ios/50/000000/personal-video-recorder-menu.png");
   }
 
   #personalVideos {
-    grid-area: 2 / 3 / 2 / 3;
     background-image: url("https://img.icons8.com/ios/48/000000/webcam-man.png");
   }
   
-  header > img {
-    grid-area: 1 / 4 / 3 / 4;
-    width: 100%;
-    height: 100%;
-  }
 
 /* MAIN */
-  main {
-    height: 100%;
-    display: grid;
-  }
 
   .cards {
-    padding: 0;
-    overflow-y: scroll;
-    margin: 1%;
-    display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(.5fr, 1fr)); */
-  }
-
-  
-  .card-container {
-    grid-template: 1fr 2fr / 1fr 1fr 1fr;
-    box-shadow: 0px 0px 2px 2px #8686865d;
-    margin: .5% .5% 5% .5%;
-  }
-  
-  .card-image-container {
-    display: grid;
-    grid-template: 1fr / 1fr 65% 1fr;
-  }
-  
-  .card-img {
-    width: 100%;
-    grid-area: 1 / 1 / 1 / span 3;
-  }
-  
-  .card {
-    display: grid;
-    grid-row: 2 / 2;
-    background-color: white;
-    width: 99%;
-    margin: 1%;
-    font-weight: bolder;
-  }
-  
-  .share-arrow {
-    grid-area: 1 / 1 / 1 / 1;
-    background-color: white;
-    border-radius: 50%;
-    padding: 15%;
-    margin: 10%;
-  }
-  
-  .view-count {
-    grid-area: 1 / 3 / 1 / 3;
-    text-align: center;
-    color: white;
-    font-size: 1.2em;
-    line-height: 150%;
+    grid-template-columns: 1fr;
   }
 
   .playlist, 
   .attachments,
   .card-name {
-    font-weight: 1000;
     font-size: 2.5vh
-  }
-  
-  .link {
-    background-color: rgba(233, 233, 233, 0.568);
-    padding: 10px;
-    color: grey;
-    word-wrap: break-word;
-    width: 85%;
-  }
-  
-  .date {
-    color: grey;
-    margin-top: 0;
   }
 
   .attachment-count {
