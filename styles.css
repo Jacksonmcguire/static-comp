@@ -38,10 +38,6 @@ li {
   list-style: none;
 }
 
-/* main {
-  height: 100%;
-  display: grid;
-} */
 
 /* CARDS */
 .cards {
@@ -110,6 +106,59 @@ li {
   color: grey;
   word-wrap: break-word;
   width: 85%;
+}
+/* DESKTOP */
+@media screen and (min-width: 901px) {
+  header {
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 2fr 1fr;
+  }
+
+  header > img {
+    grid-area: 2 / 5 / -1 / 6;
+    width: 100%;
+  }
+  
+  header > button {
+    background: transparent;
+    color: white;
+    margin-bottom: 10%;
+    border: none;
+  }
+
+  #personalVideos {
+    grid-area: 3 / 3 / 3 / 4;
+  }
+  
+  #playlists {
+    grid-area: 3 / 2 / 3 / 3;
+  }
+  
+  #shares {
+    grid-area: 3 / 1 / 3 / 2;
+  }
+
+  #shares > span > img {
+    width: 7%;
+    margin-right: 3%;
+    position: relative;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .card-container {
+    margin: 5%;
+  }
+
+  .card > p{
+    margin: 1%;
+  }
+
+  .share-arrow {
+    padding: 25%;
+    margin: 15%;
+  }
 }
 
 /* TABLET */
@@ -180,6 +229,9 @@ li {
     background-image: url("https://img.icons8.com/ios/48/000000/webcam-man.png");
   }
   
+  header > button > span > img {
+    display: none;
+  }
 
 /* MAIN */
 
