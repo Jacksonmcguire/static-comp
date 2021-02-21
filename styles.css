@@ -14,6 +14,13 @@ header {
   height: 15vh;
   display: grid; 
   grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
+  position: fixed;
+  top: 0;
+  /* margin-bottom: 50%; */
+}
+
+main {
+  margin-top: 10%;
 }
 
 #personalVideos {
@@ -44,6 +51,7 @@ li {
   padding: 0;
   margin: 1%;
   display: grid;
+  grid-template-columns: repeat(auto-fit, 25%);
 }
 
 .card-container {
@@ -54,7 +62,7 @@ li {
 /* CARD IMG */
 .card-image-container {
   display: grid;
-  grid-template: 1fr / 1fr 65% 1fr;
+  grid-template: 1fr / 1fr 2fr 1fr;
 }
 
 .card-img {
@@ -111,11 +119,13 @@ li {
 @media screen and (min-width: 901px) {
   header {
     grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 2fr 1fr;
+    padding: 1%;
   }
 
   header > img {
     grid-area: 2 / 5 / -1 / 6;
     width: 100%;
+    background: transparent;
   }
   
   header > button {
@@ -123,6 +133,8 @@ li {
     color: white;
     margin-bottom: 10%;
     border: none;
+    height: 100%;
+    font-size: 100%;
   }
 
   #personalVideos {
@@ -137,14 +149,21 @@ li {
     grid-area: 3 / 1 / 3 / 2;
   }
 
-  #shares > span > img {
-    width: 7%;
+  .icon {
+    width: 2vh;
     margin-right: 3%;
-    position: relative;
+  }
+
+  .admin-username {
+    background: transparent;
+    border: none;
+    color: cornflowerblue;
+    grid-area: 1 / 5 / 2 / 6;
+    font-size: 2vh;
   }
 
   .cards {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
   }
 
   .card-container {
@@ -156,19 +175,18 @@ li {
   }
 
   .share-arrow {
-    padding: 25%;
-    margin: 15%;
+    padding: 10%;
+    margin: 5%;
   }
 }
 
 /* TABLET */
 @media screen and (max-width: 900px) {
-  
 
   header > button {
     background: transparent;
     border: none;
-    color: WHITE;
+    color: white;
     margin-bottom: 2%;
     font-size: 2.4vh;
   }
@@ -179,7 +197,15 @@ li {
     height: 100%;
   }
 
+  .icon {
+    display: none;
+  }
+
 /* MAIN */
+  main {
+    margin-top: 25%;
+  }
+
   .cards {
     grid-template-columns: 1fr 1fr;
   }
@@ -197,6 +223,12 @@ li {
     font-size: 2em;
     margin: 0;
   }
+
+  .share-arrow {
+    margin: 10%;
+    padding: 10%;
+  }
+
 }
 
 /* MOBILE */
@@ -234,6 +266,10 @@ li {
   }
 
 /* MAIN */
+
+  main {
+    margin-top: 30%;
+  }
 
   .cards {
     grid-template-columns: 1fr;
