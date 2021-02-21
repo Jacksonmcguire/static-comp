@@ -45,6 +45,10 @@ li {
   list-style: none;
 }
 
+.admin-username {
+  color: #fff;
+}
+
 
 /* CARDS */
 .cards {
@@ -151,20 +155,15 @@ li {
 
   .icon {
     width: 2vh;
-    margin-right: 3%;
+    margin: 0 3% 0 3%;
   }
 
   .admin-username {
-    background: transparent;
-    border: none;
-    color: cornflowerblue;
+    margin-top: -0%;
     grid-area: 1 / 5 / 2 / 6;
-    font-size: 2vh;
+    font-size: 2.1vh;
   }
 
-  .cards {
-    /* grid-template-columns: 1fr 1fr 1fr; */
-  }
 
   .card-container {
     margin: 5%;
