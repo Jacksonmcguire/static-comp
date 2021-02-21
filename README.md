@@ -4,5 +4,10 @@
 * Is responsive across mobile, tablet, and desktop displays.
 
 ## Original Comp
-
+![original desktop](assets/original.png)
 ## My Version
+![Mobile](assets/mobile.png)
+
+![Tablet](assets/tablet.png)
+
+![Desktop](assets/desktop-comp.png)
